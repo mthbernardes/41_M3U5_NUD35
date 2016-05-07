@@ -20,7 +20,7 @@ nudes_founded = 0
 files_founded = 0
 
 #Link github onde esta hospedado o arquivo com as configuracoes da API
-server = 'https://gist.githubusercontent.com/mthbernardes/23a48b85a15df62237e0/raw/295a4edf0eaddb303257a6ad46776c4e10358538/nudes.txt'
+server = 'URL COM ARQUIVO NUDES.CONF'
 
 #Nome do arquivo de configuracao apos download
 config_file = 'nudes.conf'
