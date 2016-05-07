@@ -3,5 +3,7 @@ Malware  Nudes
 
 # DEPENDENCIES
 pip install requests
+
 pip install telepot
+
 pip install nudepy
